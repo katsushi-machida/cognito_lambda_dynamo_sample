@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>register</title>
+    <meta charset="utf-8">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="_resource/css/materialize.min.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <!--jQuery before materialize.js-->
+    <script type="text/javascript" src="_resource/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="_resource/js/materialize.min.js"></script>
+    <!--aws-->
+    <script type="text/javascript" src="_resource/js/aws-sdk.min.js"></script>
+    <script type="text/javascript" src="_resource/js/aws-cognito-sdk.min.js"></script>
+    <script type="text/javascript" src="_resource/js/amazon-cognito-identity.min.js"></script>
+    <!--Import config script-->
+    <script type="text/javascript" src="script/config.js"></script>
+    <!--Import register script-->
+    <script type="text/javascript" src="script/register.js"></script>
+    <!--contents header-->
+    <div class="card-panel teal lighten-2 left-align">register</div>
+    <!--contet-->
+    <form class="register">
+        <div class="contener">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="username" type="text" class="validate">
+                    <label for="username">user name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="mail" type="text" class="validate">
+                    <label for="mail">mail address</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="password" type="password" class="validate">
+                    <label for="password">password</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <a class="waves-effect waves-light btn" id="btn_register">
+                        <i class="material-icons left">add_box</i>入力した内容で新規登録する</a>
+                </div>
+            </div>
+            <div class="row" style="display:none" id="auth_obj">
+                <div class="col s12">
+                    <p>※メールで届いた認証コードを入力してください。</p>
+                </div>
+                <div class="input-field col s6">
+                    <input id="authcd" type="number" class="validate">
+                    <label for="authcd">認証コード</label>
+                </div>
+                <div class="col s12">
+                    <a class="waves-effect waves-light btn" id="btn_auth">認証</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

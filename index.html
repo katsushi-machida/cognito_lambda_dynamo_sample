@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>index</title>
+    <meta charset="utf-8">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="_resource/css/materialize.min.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <!--jQuery before materialize.js-->
+    <script type="text/javascript" src="_resource/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="_resource/js/materialize.min.js"></script>
+    <!--aws-->
+    <script type="text/javascript" src="_resource/js/aws-sdk.min.js"></script>
+    <script type="text/javascript" src="_resource/js/aws-cognito-sdk.min.js"></script>
+    <script type="text/javascript" src="_resource/js/amazon-cognito-identity.min.js"></script>
+    <!--Import config script-->
+    <script type="text/javascript" src="script/config.js"></script>
+    <!--Import index script-->
+    <script type="text/javascript" src="script/index.js"></script>
+    <!--apigateway module-->
+    <!--<script type="text/javascript" src="_resource/js/api-gateway/lib/"></script>-->
+    <!--contents header-->
+    <div class="card-panel teal lighten-2 left-align">gfre</div>
+    <div class="row">
+        <div class="col s12">
+            Username: <label id="username">XXXXX</label>
+            <br/>
+            Mail: <label id="mail">XXXXX</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <ul class="tabs">
+                <li class="tab col s4">
+                    <a class="active" href="#tabfirst">home</a>
+                </li>
+                <li class="tab col s4">
+                    <a href="#tabsecond">sub1</a>
+                </li>
+                <li class="tab col s4">
+                    <a href="#tabthird">sub2</a>
+                </li>
+            </ul>
+            <div id="tabfirst" class="col s12 light-green accent-1">
+                <div>
+                </div>
+            </div>
+            <div id="tabsecond" class="col s12 blue">
+                <div>
+                </div>
+            </div>
+            <div id="tabthird" class="col s12 yellow">
+                <div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
