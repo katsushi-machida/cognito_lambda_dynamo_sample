@@ -11,7 +11,9 @@ var initialize_cognito = (function(){
     });
     var data = {
         UserPoolId: AWS_COGNITO_USER_POOL_ID,
-        ClientId: AWS_COGNITO_USER_POOL_CLIENT_C_ID
+        ClientId: AWS_COGNITO_USER_POOL_CLIENT_C_ID,
+        Paranoia : 7,
+        Storage: sessionStorage
     };
     UserPool = new AWSCognito.CognitoIdentityServiceProvider.CognitoUserPool(data);
 });
@@ -96,12 +98,14 @@ var fn_login_auth = (function () {
     login_data = {
         UserPoolId: AWS_COGNITO_USER_POOL_ID,
         ClientId: AWS_COGNITO_USER_POOL_CLIENT_R_ID,
-        Paranoia : 7
+        Paranoia : 7,
+        Storage: sessionStorage
     };
     UserPool = new AWSCognito.CognitoIdentityServiceProvider.CognitoUserPool(login_data);
     var userData = {
         Username : name,
-        Pool : UserPool
+        Pool : UserPool,
+        Storage: sessionStorage
     };
     CognitoUser = new AWSCognito.CognitoIdentityServiceProvider.CognitoUser(userData);
     CognitoUser.authenticateUser(authenticationDetails, {
